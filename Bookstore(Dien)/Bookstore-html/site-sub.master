@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-sub.master.cs" Inherits="site_sub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="maincontent" runat="Server">
+    <asp:ContentPlaceHolder ID="banner" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="maincontent">
+        <div class="container">
+            <div class="ColContent">
+                <asp:ContentPlaceHolder ID="colcontent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="ColAside">
+                <div class="list-menu">
+                    <h1>DANH MỤC SÁCH <span class="fa fa-reorder"></span></h1>
+                    <ul>
+                        <li><a href="#">Sách kinh tế</a></li>
+                        <li><a href="#">Quản trị - Lãnh đạo</a></li>
+                        <li><a href="#">Marketing - Bán hàng</a></li>
+                        <li><a href="#">Tài chính - Kế toán</a></li>
+                        <li><a href="#">Nhân vật & Bài học kinh doanh</a></li>
+                        <li><a href="#">Sách Văn học trong nước</a></li>
+                        <li><a href="#">Sách Văn học nước ngoài</a></li>
+                        <li><a href="#">Truyện ngắn - Tản văn</a></li>
+                        <li><a href="#">Sách Thiếu nhi</a></li>
+                        <li><a href="#">Truyện tranh</a></li>
+                        <li><a href="#">Sách Phát triển bản thân</a></li>
+                        <li><a href="#">Nuôi dạy con</a></li>
+                        <li><a href="#">Sách Nấu ăn</a></li>
+                        <li><a href="#">Sách Thường thức - Đời sống</a></li>
+                        <li><a href="#">Sách Khoa học thần bí</a></li>
+                        <li><a href="#">Sách Ngoại ngữ</a></li>
+                        <li><a href="#">Tin học</a></li>
+                        <li><a href="#">Sách Chuyên ngành</a></li>
+                        <li><a href="#">Sách Giáo khoa - Giáo trình</a></li>
+                    </ul>
+                </div>
+                <div class="list-menu">
+                    <h1>TÁC GIẢ <span class="fa fa-reorder"></span></h1>
+                    <ul class="readmore">
+                        <li><a href="#">Kim Định</a></li>
+                        <li><a href="#">Phan Thị Lệ</a></li>
+                        <li><a href="#">Bạch Trà</a></li>
+                        <li><a href="#">Phạm Công Luận</a></li>
+                        <li><a href="#">Đỗ Thu Thủy</a></li>
+                        <li><a href="#">Ngọc Phương</a></li>
+                        <li><a href="#">Tôn Nữ Tường Vy</a></li>
+                        <li><a href="#">Diệu Ái</a></li>
+                        <li><a href="#">Henry Kissinger</a></li>
+                        <li><a href="#">Torarika</a></li>
+                        <li><a href="#">Đặng Hằng</a></li>
+                        <li><a href="#">Kim Định</a></li>
+                        <li><a href="#">Phan Thị Lệ</a></li>
+                        <li><a href="#">Bạch Trà</a></li>
+                        <li><a href="#">Phạm Công Luận</a></li>
+                        <li><a href="#">Đỗ Thu Thủy</a></li>
+                        <li><a href="#">Ngọc Phương</a></li>
+                        <li><a href="#">Tôn Nữ Tường Vy</a></li>
+                        <li><a href="#">Diệu Ái</a></li>
+                        <li><a href="#">Henry Kissinger</a></li>
+                        <li><a href="#">Torarika</a></li>
+                        <li><a href="#">Đặng Hằng</a></li>
+                    </ul>
+                </div>
+                <asp:ContentPlaceHolder ID="asideinfo" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+

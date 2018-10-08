@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-sub.master.cs" Inherits="site_sub" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="slide_df" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="container">
+        <div class="poster">
+            <div class="item">
+                <a href="#">
+                    <img src="assets/images/poster1.png" alt="" />
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="assets/images/poster2.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <div class="main">
+            <div class="aside">
+                <div class="cate-rice">
+                    <ul>
+                        <li><a href="#">Gạo Ngon Gia Đình</a></li>
+                        <li><a href="#">Gạo Suất Ăn Công Nghiệp</a></li>
+                        <li><a href="#">Gạo Từ Thiện </a></li>
+                        <li><a href="#">Gạo Lứt Ăn Kiêng</a></li>
+                        <li><a href="#">Gạo Nếp Đặc Sản</a></li>
+                    </ul>
+                </div>
+                <asp:ContentPlaceHolder ID="Sp_noibat" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="wrap-main">
+                <asp:ContentPlaceHolder ID="main_content" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="maps" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

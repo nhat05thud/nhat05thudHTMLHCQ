@@ -1,0 +1,334 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,500italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <link href="assets/styles/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/styles/jquery.modal.css" rel="stylesheet" />
+    <link href="assets/styles/site.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/site-repond.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 8]>
+        <link href="assets/styles/ie7.css" rel="stylesheet" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <style type="text/css">
+            .corner
+            { 
+                behavior: url(PIE.htc); 
+            }
+            .fullbox-img, .full-boxbg
+            {
+	            -ms-behavior: url(backgroundsize.min.htc);
+	            behavior: url(backgroundsize.min.htc);
+            }
+        </style>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+    <!-- JW Player -->
+    <link href="assets/styles/font.css" rel="stylesheet" />
+
+
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--active menu-->
+    <script type="text/javascript">
+        function changeActiveMenu(page) {
+            $('#menu li').removeClass("active");
+            $('#menu li a[href*="' + page + '"]').parent("li").addClass("active");
+            $('.list-menu li').removeClass("active");
+            $('.list-menu li a[href*="' + page + '"]').parent("li").addClass("active");
+        }
+        function changeSubActiveMenu(page) {
+            $('#menu li li').removeClass("active");
+            $('#menu li li a[href$="' + page + '"]').parents("li").addClass("active");
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <div id="wrapper-in">
+                <!--header-->
+                <div id="header" class="desktop-992">
+                    <div class="header-top">
+                        <div class="container">
+                            <div class="logo">
+                                <a id="A3" href="~/" runat="server">
+                                    <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
+                            </div>
+                            <div class="header-right">
+                                <div class="hotline">
+                                    Hotline <span>19001080</span>
+                                </div>
+                                <div class="shiper">
+                                    <span>GIAO HÀNG MIỄN PHÍ</span>
+                                    Đơn hàng từ 200.000đ
+                                </div>
+                                <div class="logn-member">
+                                    <span class="header-lognin">ĐĂNG NHẬP</span>
+                                    Chưa có tài khoản? <a class="header-register" href="dang-ky.aspx">ĐĂNG KÝ</a>
+                                    <div class="lognin">
+                                        <h1>ĐĂNG NHẬP</h1>
+                                        <div class="form-group input-group">
+                                            <div class="icon-input"><span class="icon-user"></span></div>
+                                            <asp:TextBox ID="TextBox3" CssClass="input-lognin" runat="server" placeholder="Tên đăng nhập"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <div class="icon-input"><span class="icon-pass"></span></div>
+                                            <asp:TextBox ID="TextBox1" CssClass="input-lognin" runat="server" placeholder="Mật khẩu"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group password-helper">
+                                            <label class="label-pass">
+                                                <input name="remember_me" id="remember_me" value="Y" checked="checked" type="checkbox">
+                                                Ghi nhớ đăng nhập</label>
+                                            <a href="#">Quên mật khẩu</a>
+                                        </div>
+                                        <div class="form-group longin-btn">
+                                            <asp:Button ID="Button1" CssClass="button-btn" runat="server" Text="ĐĂNG NHẬP" />
+                                        </div>
+                                        <div class="form-group register-logn">
+                                            Bạn chưa có tài khoản? <a href="#">Đăng ký ngay</a>
+                                        </div>
+                                        <div class="logn-bot">
+                                            <span>HOẶC ĐĂNG NHẬP BẰNG</span>
+                                            <a href="#">
+                                                <img src="assets/images/icon5.png" alt="" /></a>
+                                            <a href="#">
+                                                <img src="assets/images/icon6.png" alt="" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-bg">
+                                    <div class="cart-info">
+                                        <span>GIỎ HÀNG</span>
+                                        <span class="cart-numbers">(1)</span> sản phẩm
+                                    </div>
+                                    <div class="cart-box">
+                                        <div class="cart-list">
+                                            <ul>
+                                                <li>Sản phẩm 1 <span class="price-cart">100.000 <sup>đ</sup></span></li>
+                                                <li>Sản phẩm 2 <span class="price-cart">200.000 <sup>đ</sup></span></li>
+                                                <li>Sản phẩm 3 <span class="price-cart">300.000 <sup>đ</sup></span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="sum-cart">
+                                            TỔNG CỘNG: <span>600.000 <sup>đ</sup></span>
+                                        </div>
+                                        <div class="cart-book">
+                                            <a href="gio-hang.aspx">Xem giỏ hàng</a>
+                                            <div class="dangnhap">
+                                                <a class="button-btn" data-modal="#login-modal" href="javascript:void(0);">ĐĂNG NHẬP</a>
+                                            </div>
+                                        </div>
+                                        <div id="login-modal" class="modal" style="display: none;">
+                                            <div class="lognin">
+                                                <h1>ĐĂNG NHẬP</h1>
+                                                <div class="form-group input-group">
+                                                    <div class="icon-input"><span class="icon-user"></span></div>
+                                                    <asp:TextBox ID="TextBox5" CssClass="input-lognin" runat="server" placeholder="Tên đăng nhập"></asp:TextBox>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <div class="icon-input"><span class="icon-pass"></span></div>
+                                                    <asp:TextBox ID="TextBox6" CssClass="input-lognin" runat="server" placeholder="Mật khẩu"></asp:TextBox>
+                                                </div>
+                                                <div class="form-group password-helper">
+                                                    <label class="label-pass">
+                                                        <input name="remember_me" id="Checkbox1" value="Y" checked="checked" type="checkbox">
+                                                        Ghi nhớ đăng nhập</label>
+                                                    <a href="#">Quên mật khẩu</a>
+                                                </div>
+                                                <div class="form-group longin-btn">
+                                                    <asp:Button ID="Button5" CssClass="button-btn" runat="server" Text="ĐĂNG NHẬP" />
+                                                </div>
+                                                <div class="form-group register-logn">
+                                                    Bạn chưa có tài khoản? <a href="dang-ky.aspx">Đăng ký ngay</a>
+                                                </div>
+                                                <div class="logn-bot">
+                                                    <span>HOẶC ĐĂNG NHẬP BẰNG</span>
+                                                    <a href="#">
+                                                        <img src="assets/images/icon5.png" alt="" /></a>
+                                                    <a href="#">
+                                                        <img src="assets/images/icon6.png" alt="" /></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-main">
+                        <div class="container">
+                            <div class="wrapper-menu">
+                                <ul id="menu">
+                                    <li><a href="kho-sach-giam-gia.aspx">KHO SÁCH GIẢM GIÁ</a></li>
+                                    <li><a href="sach-ban-chay.aspx">SÁCH BÁN CHẠY</a></li>
+                                    <li><a href="#">SÁCH MỚI PHÁT HÀNH</a></li>
+                                    <li><a href="#">SÁCH SẮP PHÁT HÀNH</a></li>
+                                </ul>
+                            </div>
+                            <div class="search-form">
+                                <div class="form-search corner desktop-992">
+                                    <asp:Button ID="Button2" CssClass="search-btn" runat="server" Text="TÌM SÁCH" />
+                                    <div class="search-input">
+                                        <asp:TextBox ID="TextBox2" CssClass="search-text" runat="server" placeholder="Tìm kiếm..."></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end header-->
+                <!--header-mobi-->
+                <div class="header-mobi ipadmo-992">
+                    <div class="container">
+                        <div class="menumobi">
+                            <a class="panel-a menu-mo" href="#menumobile" data-position="true" data-type="false"><span class="fa fa-reorder"></span></a>
+                        </div>
+                        <div class="logomobi">
+                            <a id="A1" href="~/" runat="server">
+                                <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
+                        </div>
+                        <div class="cartmobi">
+                            <div class="cart-bg">
+                                <div class="cart-info">
+                                    <span>GIỎ HÀNG</span>
+                                    <span class="cart-numbers">(1)</span> sản phẩm
+                                </div>
+                                <div class="cart-box">
+                                    <div class="cart-list">
+                                        <ul>
+                                            <li>Sản phẩm 1 <span class="price-cart">100.000 <sup>đ</sup></span></li>
+                                            <li>Sản phẩm 2 <span class="price-cart">200.000 <sup>đ</sup></span></li>
+                                            <li>Sản phẩm 3 <span class="price-cart">300.000 <sup>đ</sup></span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sum-cart">
+                                        TỔNG CỘNG: <span>600.000 <sup>đ</sup></span>
+                                    </div>
+                                    <div class="cart-book">
+                                        <a href="#">Xem giỏ hàng</a>
+                                        <div class="dangnhap">
+                                            <a class="button-btn" href="dang-nhap.aspx">ĐĂNG NHẬP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-search corner">
+                            <asp:Button ID="Button3" CssClass="search-btn" runat="server" Text="TÌM SÁCH" />
+                            <div class="search-input">
+                                <asp:TextBox ID="TextBox7" CssClass="search-text" runat="server" placeholder="Tìm kiếm..."></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end-header-->
+                <hr />
+                <!--main-->
+                <div id="mainContent">
+                    <asp:ContentPlaceHolder ID="maincontent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--end main-->
+                <hr />
+                <!--footer-->
+                <div id="footer">
+                    <div class="container">
+                        <div class="footer-info">
+                            <h1>LIÊN HỆ</h1>
+                            <ul class="address">
+                                <li><span class="fa fa-map-marker"></span>111 Tên Lửa, P. Bình Trị Đông B, Q. Bình Tân</li>
+                                <li><span class="fa fa-phone"></span>0917 377 999</li>
+                                <li><span class="fa fa-envelope"></span><a href="mailto:hotro@bookstore.com">hotro@bookstore.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-info">
+                            <h1>VỀ CÔNG TY</h1>
+                            <ul class="list-footer">
+                                <li><a href="gioi-thieu.aspx">Giới thiệu công ty</a></li>
+                                <li><a href="tuyen-dung.aspx">Tuyển dụng</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-info">
+                            <h1>TRỢ GIÚP</h1>
+                            <ul class="list-footer">
+                                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                                <li><a href="#">Phương thức thanh toán</a></li>
+                                <li><a href="#">Phương thức vận chuyển</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-info">
+                            <h1>ĐĂNG KÝ NHẬN EMAIL</h1>
+                            <div class="inpuy-mail">
+                                <asp:TextBox ID="TextBox4" CssClass="mail-text" runat="server" placeholder="Nhập tên của bạn..."></asp:TextBox>
+                                <asp:TextBox ID="TextBox8" CssClass="mail-text" runat="server" placeholder="Nhập tên của bạn..."></asp:TextBox>
+                            </div>
+                               <asp:Button ID="Button4" CssClass="mail-btn" runat="server" Text="ĐĂNG KÝ" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bot">
+                    <div class="container"> 
+                        <div class="coppy-right">Copyright © 2017 BOOK STORE. Allright reserved. <a href="http://www.hcq.vn" target="_blank">Thiet ke web HCQ</a></div>
+                    </div>
+                </div>
+            </div>
+            <!--end footer-->
+
+            <!--menumobile-->
+            <div id="menumobile" class="mobile-panel mobilep-left">
+                <div class="close-menu"><a href="#menumobile" class="glyphicon glyphicon-remove-circle">close</a></div>
+                <div class="menu-in">
+                    <div class="menu-mobile">
+                        <div class="logo">
+                            <a id="A2" href="~/" runat="server">
+                                <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a>
+                        </div>
+                         <div class="logninmobi">
+                            <a href="dang-ky.aspx">Đăng ký</a> | <a href="dang-nhap.aspx">Đăng nhập</a>
+                        </div>
+                        <ul id="menuMobile" class="menu-nav">
+                        </ul>
+                         <div class="hotlinemobi">
+                            <p>HOTLINE</p>
+                            <p><span>19001080</span></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--menumobile-->
+        </div>
+        <!--active-->
+        <div id="runScript" runat="server"></div>
+        <div id="sroltop">
+            <a class="corner" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        </div>
+        <div id="updateie">
+            <div class="textup text-center">Please upgrade IE 8+, Download <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">here</a></div>
+        </div>
+        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.panel.mobile.js" type="text/javascript"></script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script src="assets/js/readmore.min.js"></script>
+        <script src="assets/js/jquery.modal.js"></script>
+        <script src="assets/js/jquery.main.js"></script>
+    </form>
+</body>
+</html>
